@@ -2,17 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[\App\Http\Controllers\PrincipalController::class,'principal']);
 
-Route::get('/contato', function () {
-    return view('welcome');
-});
+Route::get('/contato',[\App\Controllers\ContatoController::class,'contato']);
 
-Route::get('/sobre-nos', function () {
-    return view('welcome');
-});
+Route::get('/sobre-nos',[\App\Controllers\SobreNosController::class,'sobreNos']);
 
 Route::get('/login', function () {
     return view('welcome');
